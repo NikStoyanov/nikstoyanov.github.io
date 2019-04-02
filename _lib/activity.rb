@@ -14,7 +14,7 @@ class Strava::Models::Activity < Strava::Model
   
     def filename
       [
-        "_posts/#{start_date_local.year}/#{start_date_local.strftime('%Y-%m-%d')}",
+        "content/runs/#{start_date_local.year}/#{start_date_local.strftime('%Y-%m-%d')}",
         type.downcase,
         distance_in_miles_s,
         moving_time_in_hours_s
