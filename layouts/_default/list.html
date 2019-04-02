@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ $paginator := .Paginate (.Pages.ByPublishDate.Reverse) }}
+{{ range $paginator.Pages }}
+
+<p>
+  <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
+  <br>
+  {{ partial "date-and-tags.html" . }}
+</p>
+{{ end }}
+{{ template "_internal/pagination.html" . }}
+
+{{ end }}
