@@ -1,0 +1,11 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.4.1
+script:
+- bash ./_scripts/update.sh
+branches:
+  only:
+  - gh-pages
+env:
+  secure: KAjvdyGhl+pyO3nWSZnhqQOxeOAf7fipOqY/UqlHdS5jC+m18Udt3LsBBmvZdOeBgRA/Dg68NCyVROXWVEmoLNNN7UUoDAZ+AFmJwrzU38mVIkSEoyT6OUAYflVFNOnmhjcZ6eR1Bf6ZWDHo+MX76ieoTYWhEgFkflaOm67dOZWJ9jiJ9+wa3B7jzXlWcIWoZEDw7t1r3+1ChNNWm08LqNUGuRzFiaUGGDOD41ZbwiJ1YOoOd6ujFht3Uh/+9z/Yj6X/auKxzLtPPPHhFaM10xcys1Ltn8zmCTa9SPp1DgU9g4WeOkR5+zQ4zt4Dx5fKWlNBLTA5OpgYGl/UmpPY9U+gaPPQxtkh0zQejBCjdkZoaumbEH3bHVA+Qzq/FJL5uLySaWkWiHYr6zH+QgM7Oas9kpvHJIlJqJTJcFCw+9uCwAJDVF95DFwMf7g19v0v+8iWO+SWpNC8YVPsYOrtdgCCk7CHa5jYQhfpwAHK5a1smOXshoMWjXDbdivo9s3ulc/13Oms5jqJeetPgw4010YMf5fFach7PYVvRqkGsi4UBeZO3yJqFr0KOpJp4NxobqqyeUVqEv2QLYdjupz3XXRsVAN9EJxbkax2EU910l52pWIRZ7yirZKgXEPujvVMGM77+l8LKq+/NGgFjtjpmJ0hJ8zsc4CwlabZ+b/D5Aw=

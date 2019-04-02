@@ -1,0 +1,70 @@
+baseURL = "https://nikstoyanov.github.io"
+languageCode = "en-us"
+title = "My activities"
+theme = "vanilla-bootstrap-hugo-theme"
+googleAnalytics = "UA-129217636-2"
+
+# Uncomment below to enable syntax highlighting
+# pygmentsCodefences = true
+# pygmentsCodefencesGuessSyntax = true
+# See https://xyproto.github.io/splash/docs/all.html for more styles
+# pygmentsStyle = "pygments"
+
+[taxonomies]
+  tag = "tags"
+
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    identifier = "runs"
+    name = "Runs"
+    pre = "activity"
+    url = "/runs/"
+    weight = 2
+  [[menu.nav]]
+    identifier = "swims"
+    name = "Swims"
+    pre = "activity"
+    url = "/swims/"
+    weight = 3
+  [[menu.nav]]
+    identifier = "gym"
+    name = "Gym"
+    pre = "activity"
+    url = "/gym/"
+    weight = 4
+  [[menu.nav]]
+    identifier = "random"
+    name = "Random"
+    pre = "smile"
+    url = "/rand/"
+    weight = 5
+  [[menu.nav]]
+    name = "Tags"
+    pre = "tag"
+    url = "/tags/"
+    weight = 6
+  [[menu.nav]]
+    name = "About"
+    pre = "rss"
+    url = "https://nikstoyanov.me/"
+    weight = 7
+  [[menu.nav]]
+    name = "Fork me"
+    pre = "github"
+    url = "https://github.com/NikStoyanov/nikstoyanov.github.io"
+    weight = 8
+
+[params]
+  includeBootstrapJs = false
+  showActiveNav = true
+  containerMaxWidth = "900px"
+  dateFormat = "Jan 2, 2006"
+  homeText = "Welcome to this data dump of my [strava](https://www.strava.com/activities/2234235049) account and a collection of random write-ups. May you have fun."
+  footerText = "Made with [Hugo](https://gohugo.io/) & [Vanilla](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme)"
+  custom_css = ["css/table.css"]
+hideFooter = false
