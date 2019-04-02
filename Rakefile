@@ -34,7 +34,7 @@ namespace :strava do
         next unless activity.type == 'Run'
         activity = Strava.client.activity(activity.id)
 
-        FileUtils.mkdir_p "content/#{activity.start_date_local.year}"
+        FileUtils.mkdir_p "content/runs/#{activity.start_date_local.year}"
 
         File.open activity.filename, 'w' do |file|
           tags = [
