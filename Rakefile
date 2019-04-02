@@ -50,6 +50,7 @@ date: "#{activity.start_date_local.strftime('%F %T')}"
 tags: [#{tags.join(', ')}]
 menu:
   nav:
+    identifier: "#{activity.start_date_local.strftime('%F %T')}"
     parent: "runs"
     weight: 130
 ---
