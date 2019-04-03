@@ -31,19 +31,19 @@ namespace :strava do
       break unless activities.any?
 
       activities.each do |activity|
-        next unless activity.type == 'Run'
-        activity = Strava.client.activity(activity.id)
+        if activity.type == 'Run'
+          activity = Strava.client.activity(activity.id)
 
-        FileUtils.mkdir_p "content/runs/#{activity.start_date_local.year}"
+          FileUtils.mkdir_p "content/runs/#{activity.start_date_local.year}"
 
-        File.open activity.filename, 'w' do |file|
-          tags = [
-            "#{activity.type.downcase}s",
-            "#{activity.rounded_distance_in_miles_s} miles",
-            activity.race? ? 'races' : nil
-          ].compact
+          File.open activity.run_filename, 'w' do |file|
+            tags = [
+              "#{activity.type.downcase}s",
+              "#{activity.rounded_distance_in_kilometres_s} km",
+              activity.race? ? 'races' : nil
+            ].compact
 
-          file.write <<-EOS
+            file.write <<-EOS
 ---
 title: "#{activity.name}"
 date: "#{activity.start_date_local.strftime('%F %T')}"
@@ -56,34 +56,82 @@ menu:
 ---
           EOS
 
-          file.write "\n### Stats\n"
-          file.write "\n| Distance | Time | Pace |"
-          file.write "\n|----------|------|------|"
-          file.write "\n|#{activity.distance_in_miles_s}|#{activity.moving_time_in_hours_s}|#{activity.pace_per_mile_s}|\n"
+            file.write "\n### Stats\n"
+            file.write "\n| Distance | Time | Pace |"
+            file.write "\n|----------|------|------|"
+            file.write "\n|#{activity.distance_in_kilometers_s}|#{activity.moving_time_in_hours_s}|#{activity.pace_per_kilometer_s}|\n"
 
-          file.write "\n#{activity.description}\n" if activity.description && !activity.description.empty?
-          file.write "\n<img src='#{activity.map.image_url}'>\n" if activity.map && activity.map.image_url
+            file.write "\n#{activity.description}\n" if activity.description && !activity.description.empty?
+            file.write "\n<img src='#{activity.map.image_url}'>\n" if activity.map && activity.map.image_url
 
-          if activity.splits_standard && activity.splits_standard.any?
-            file.write "\n### Splits\n"
-            file.write "\n| Mile | Pace | Elevation |"
-            file.write "\n|------|------|-----------|"
-            activity.splits_standard.each do |split|
-              file.write "\n|#{split.split}|#{split.pace_per_mile_s}|#{split.total_elevation_gain_in_feet_s}|"
+            if activity.splits_standard && activity.splits_standard.any?
+              file.write "\n### Splits\n"
+              file.write "\n| Kilometre | Pace | Elevation |"
+              file.write "\n|------|------|-----------|"
+              activity.splits_standard.each do |split|
+                file.write "\n|#{split.split}|#{split.pace_per_kilometer_s}|#{split.total_elevation_gain_in_meters_s}|"
+              end
+              file.write "\n"
             end
-            file.write "\n"
-          end
 
-          photos = Strava.client.activity_photos(activity.id, size: '600')
-          if photos.any?
-            file.write "\n### Photos"
-            photos.each do |photo|
-              url = photo.urls['600']
-              file.write "\n<img src='#{url}'>\n"
+            photos = Strava.client.activity_photos(activity.id, size: '600')
+            if photos.any?
+              file.write "\n### Photos"
+              photos.each do |photo|
+                url = photo.urls['600']
+                file.write "\n<img src='#{url}'>\n"
+              end
+            end
+    
+            puts activity.filename
+          end
+          
+        elsif activity.type == 'Swim'
+          activity = Strava.client.activity(activity.id)
+
+          FileUtils.mkdir_p "content/swims/#{activity.start_date_local.year}"
+
+          File.open activity.swim_filename, 'w' do |file|
+            tags = [
+              "#{activity.type.downcase}s",
+              "#{activity.distance_s} m",
+              activity.race? ? 'races' : nil
+            ].compact
+
+            file.write <<-EOS
+---
+title: "#{activity.name}"
+date: "#{activity.start_date_local.strftime('%F %T')}"
+tags: [#{tags.join(', ')}]
+menu:
+  nav:
+    identifier: "#{activity.start_date_local.strftime('%F %T')}"
+    parent: "swims"
+    weight: 130
+---
+          EOS
+
+            file.write "\n### Stats\n"
+            file.write "\n| Distance | Time | Pace |"
+            file.write "\n|----------|------|------|"
+            file.write "\n|#{activity.distance_in_meters_s}|#{activity.moving_time_in_hours_s}|#{activity.pace_per_100_meters_s}|\n"
+
+            file.write "\n#{activity.description}\n" if activity.description && !activity.description.empty?
+            file.write "\n<img src='#{activity.map.image_url}'>\n" if activity.map && activity.map.image_url
+
+            if activity.splits_standard && activity.splits_standard.any?
+              file.write "\n### Splits\n"
+              file.write "\n| Metre | Pace |"
+              file.write "\n|------|------|"
+              activity.splits_standard.each do |split|
+                file.write "\n|#{split.split}|#{split.pace_per_100_meters_s}|"
+              end
+              file.write "\n"
             end
           end
+        else
+          next
         end
-        puts activity.filename
       end
       page += 1
       activities = Strava.client.athlete_activities(activities_options.merge(page: page))

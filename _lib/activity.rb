@@ -12,11 +12,20 @@ class Strava::Models::Activity < Strava::Model
       "name=#{name}, start_date=#{start_date}, distance=#{distance_s}, moving time=#{moving_time_in_hours_s}, pace=#{pace_s}, #{map}"
     end
   
-    def filename
+    def run_filename
       [
         "content/runs/#{start_date_local.year}/#{start_date_local.strftime('%Y-%m-%d')}",
         type.downcase,
-        distance_in_miles_s,
+        distance_in_kilometers_s,
+        moving_time_in_hours_s
+      ].join('-') + '.md'
+    end
+
+    def swim_filename
+      [
+        "content/swims/#{start_date_local.year}/#{start_date_local.strftime('%Y-%m-%d')}",
+        type.downcase,
+        distance_in_meters_s,
         moving_time_in_hours_s
       ].join('-') + '.md'
     end
@@ -25,7 +34,7 @@ class Strava::Models::Activity < Strava::Model
       workout_type == 'race'
     end
   
-    def rounded_distance_in_miles_s
-      format('%d-%0d', distance_in_miles, distance_in_miles + 1)
+    def rounded_distance_in_kilometres_s
+      format('%d-%0d', distance_in_kilometers_s, distance_in_kilometers_s + 1)
     end
   end
