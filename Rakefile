@@ -117,16 +117,6 @@ menu:
 
             file.write "\n#{activity.description}\n" if activity.description && !activity.description.empty?
             file.write "\n<img src='#{activity.map.image_url}'>\n" if activity.map && activity.map.image_url
-
-            if activity.splits_standard && activity.splits_standard.any?
-              file.write "\n### Splits\n"
-              file.write "\n| Metre | Pace |"
-              file.write "\n|------|------|"
-              activity.splits_standard.each do |split|
-                file.write "\n|#{split.split}|#{split.pace_per_100_meters_s}|"
-              end
-              file.write "\n"
-            end
           end
           puts activity.swim_filename
 
