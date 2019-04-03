@@ -82,9 +82,8 @@ menu:
                 file.write "\n<img src='#{url}'>\n"
               end
             end
-    
-            puts activity.filename
           end
+          puts activity.run_filename
           
         elsif activity.type == 'Swim'
           activity = Strava.client.activity(activity.id)
@@ -129,6 +128,8 @@ menu:
               file.write "\n"
             end
           end
+          puts activity.swim_filename
+          
         else
           next
         end
