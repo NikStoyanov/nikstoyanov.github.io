@@ -49,7 +49,7 @@ googleAnalytics = "UA-129217636-2"
     url = "/tags/"
     weight = 6
   [[menu.nav]]
-    name = "About"
+    name = "About Me"
     pre = "rss"
     url = "https://nikstoyanov.me/"
     weight = 7
@@ -64,7 +64,7 @@ googleAnalytics = "UA-129217636-2"
   showActiveNav = true
   containerMaxWidth = "900px"
   dateFormat = "Jan 2, 2006"
-  homeText = "Welcome to this data dump of my [strava](https://www.strava.com/activities/2234235049) account and a collection of random write-ups. May you have fun."
+  homeText = "Welcome to this data dump of my [Strava](https://www.strava.com/athletes/8968263) account and a collection of random write-ups. May you have fun."
   footerText = "Made with [Hugo](https://gohugo.io/) & [Vanilla](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme)"
   custom_css = ["css/table.css"]
 hideFooter = false
