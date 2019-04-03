@@ -7,7 +7,23 @@
 {{ else }}
   <h1>{{ .Site.Title }}</h1>
   <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
-{{ end }}
+  
+  <p class="font-125">This blog is build with hugo on <a href="https://www.netlify.com/">Netlify</a>. 
+  It also has a daily CRON job on <a href="https://travis-ci.org/NikStoyanov/nikstoyanov.github.io">Travis-CI</a>
+  which runs an <a href="https://github.com/NikStoyanov/nikstoyanov.github.io/blob/master/Rakefile">update script</a> to pull new running and swimming activities. Gym and random entries are manual since they can be unique and that prevents automation. The idea and majority of code is from <a href="https://code.dblock.org/2018/02/17/auto-publishing-strava-runs-to-github-pages.html">Daniel Doubrovkine</a>.
+  The rest has been adapted to suit my purposes and you can fork the code <a href="https://github.com/NikStoyanov/nikstoyanov.github.io">on github</a>. The <a href="https://github.com/dblock/strava-ruby-client">Ruby Strava API client</a> is used to pull new activities and post process them to markdown blogposts.</p>
+
+  <blockquote class="blockquote">
+    <p class="mb-0">Run and become.
+      Become and run.
+      Run to succeed in the outer world.
+      Become to proceed in the inner world.
+  </p>
+    
+    <footer class="blockquote-footer">Sri Chinmoy</footer>
+  </blockquote>
+
+  {{ end }}
 </div>
 
 {{ end }}
