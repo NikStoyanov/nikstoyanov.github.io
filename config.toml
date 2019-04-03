@@ -49,12 +49,12 @@ googleAnalytics = "UA-129217636-2"
     url = "/tags/"
     weight = 6
   [[menu.nav]]
-    name = "About Me"
+    name = "About"
     pre = "rss"
     url = "https://nikstoyanov.me/"
     weight = 7
   [[menu.nav]]
-    name = "Fork me"
+    name = "Fork Me"
     pre = "github"
     url = "https://github.com/NikStoyanov/nikstoyanov.github.io"
     weight = 8
