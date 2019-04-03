@@ -6,12 +6,16 @@
   {{ . }}
 {{ else }}
   <h1>{{ .Site.Title }}</h1>
+  <a href="https://travis-ci.org/NikStoyanov/nikstoyanov.github.io"><img src="https://travis-ci.org/NikStoyanov/nikstoyanov.github.io.svg?branch=master" /></a>
+  <a href="https://depfu.com/github/NikStoyanov/nikstoyanov.github.io?project_id=7601"><img src="https://badges.depfu.com/badges/ab4223b0ab03096dbeee8c1e01210462/overview.svg" /></a>
+  <a href="https://app.netlify.com/sites/gifted-benz-a6309a/deploys"><img src="https://api.netlify.com/api/v1/badges/4c904306-1ae9-459d-b50a-f62cf3fc7c3e/deploy-status" /></a>
+  <br /><br />
   <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
   
-  <p class="font-125">This blog is build with hugo on <a href="https://www.netlify.com/">Netlify</a>. 
+  <p class="font-125">This blog is build with Hugo on <a href="https://app.netlify.com/sites/gifted-benz-a6309a/deploys">Netlify</a>. 
   It also has a daily CRON job on <a href="https://travis-ci.org/NikStoyanov/nikstoyanov.github.io">Travis-CI</a>
   which runs an <a href="https://github.com/NikStoyanov/nikstoyanov.github.io/blob/master/Rakefile">update script</a> to pull new running and swimming activities. Gym and random entries are manual since they can be unique and that prevents automation. The idea and majority of code is from <a href="https://code.dblock.org/2018/02/17/auto-publishing-strava-runs-to-github-pages.html">Daniel Doubrovkine</a>.
-  The rest has been adapted to suit my purposes and you can fork the code <a href="https://github.com/NikStoyanov/nikstoyanov.github.io">on github</a>. The <a href="https://github.com/dblock/strava-ruby-client">Ruby Strava API client</a> is used to pull new activities and post process them to markdown blogposts.</p>
+  The rest has been adapted to suit my purposes and you can fork the code <a href="https://github.com/NikStoyanov/nikstoyanov.github.io">on Github</a>. The <a href="https://github.com/dblock/strava-ruby-client">Ruby Strava API client</a> is used to pull new activities and post process them to markdown blogposts.</p>
 
   <blockquote class="blockquote">
     <p class="mb-0">Run and become.
