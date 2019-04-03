@@ -1,7 +1,7 @@
 ---
 title: "Type B Light"
 date: "2019-03-27 10:30:00"
-tags: [gym, Type-A, light]
+tags: [gym, Type-B, light]
 menu:
   nav:
     identifier: "2019-03-27 10:30:00"
