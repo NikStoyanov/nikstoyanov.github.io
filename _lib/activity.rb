@@ -35,6 +35,6 @@ class Strava::Models::Activity < Strava::Model
     end
   
     def rounded_distance_in_kilometres_s
-      format('%d-%0d', distance_in_kilometers_s, distance_in_kilometers_s + 1)
+      format('%d-%0d', distance_in_kilometers, distance_in_kilometers + 1)
     end
   end
