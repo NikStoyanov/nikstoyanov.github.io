@@ -40,7 +40,9 @@ class Strava::Models::Activity < Strava::Model
 
     def rounded_distance_in_hundred_metres_s
       rounded_distance_up = distance_in_meters / 100
-      rounded_distance_down = distance_in_meters / 100 + 1
+      rounded_distance_up = rounded_distance_up.round
+      rounded_distance_down = distance_in_meters / 100
+      rounded_distance_down = rounded_distance_down.round + 1
       format('%d-%0d', rounded_distance_up * 100, rounded_distance_down * 100)
     end
   end
