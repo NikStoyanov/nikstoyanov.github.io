@@ -117,6 +117,15 @@ menu:
 
             file.write "\n#{activity.description}\n" if activity.description && !activity.description.empty?
             file.write "\n<img src='#{activity.map.image_url}'>\n" if activity.map && activity.map.image_url
+
+            photos = Strava.client.activity_photos(activity.id, size: '600')
+            if photos.any?
+              file.write "\n### Photos"
+              photos.each do |photo|
+                url = photo.urls['600']
+                file.write "\n<img src='#{url}'>\n"
+              end
+            end
           end
           puts activity.swim_filename
 
