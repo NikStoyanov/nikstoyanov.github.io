@@ -93,7 +93,6 @@ menu:
           File.open activity.swim_filename, 'w' do |file|
             tags = [
               "#{activity.type.downcase}s",
-              "#{activity.distance_s} m",
               activity.race? ? 'races' : nil
             ].compact
 
