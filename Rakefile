@@ -64,11 +64,11 @@ menu:
             file.write "\n#{activity.description}\n" if activity.description && !activity.description.empty?
             file.write "\n<img src='#{activity.map.image_url}'>\n" if activity.map && activity.map.image_url
 
-            if activity.splits_standard && activity.splits_standard.any?
+            if activity.splits_metric && activity.splits_metric.any?
               file.write "\n### Splits\n"
               file.write "\n| Kilometre | Pace | Elevation |"
               file.write "\n|------|------|-----------|"
-              activity.splits_standard.each do |split|
+              activity.splits_metric.each do |split|
                 file.write "\n|#{split.split}|#{split.pace_per_kilometer_s}|#{split.total_elevation_gain_in_meters_s}|"
               end
               file.write "\n"
@@ -84,7 +84,7 @@ menu:
             end
           end
           puts activity.run_filename
-          
+
         elsif activity.type == 'Swim'
           activity = Strava.client.activity(activity.id)
 
