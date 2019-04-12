@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {{ .Hugo.Generator }}
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     {{ range .Site.Params.custom_css -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}
@@ -12,4 +13,5 @@
     {{ end }}
     <title>{{ $title }}</title>
     {{ partial "style.html" . }}
-  </head>
+</head>
+
