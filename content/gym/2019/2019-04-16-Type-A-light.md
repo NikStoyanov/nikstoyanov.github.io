@@ -26,7 +26,7 @@ Type-A light 2st in a row.
 ### Exercises
 
 | Group                   | Exercise                                                                                                       | Repetitions (kg) |
-|-------------------------+----------------------------------------------------------------------------------------------------------------+------------------|
+|-------------------------|----------------------------------------------------------------------------------------------------------------|------------------|
 | Back (Latissimus Dorsi) | [Cable pulldown](https://exrx.net/WeightExercises/LatissimusDorsi/CBFrontPulldown)                             | 10 x 52          |
 | Hamstrings (Isolated)   | [Lever single leg seated leg curl](https://exrx.net/WeightExercises/Hamstrings/LVSingleLegSeatedLegCurlHammer) | 10 x 2 x 30      |
 | Back (General)          | [Cable seated row](https://exrx.net/WeightExercises/BackGeneral/CBSeatedRow)                                   | 12 x 43          |
