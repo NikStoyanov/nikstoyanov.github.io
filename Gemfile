@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'dotenv'
-gem 'github-pages'
 gem 'hashie'
 gem 'html-proofer'
 gem 'httparty'
