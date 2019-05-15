@@ -62,7 +62,7 @@ menu:
             file.write "\n|#{activity.distance_in_kilometers_s}|#{activity.moving_time_in_hours_s}|#{activity.pace_per_kilometer_s}|\n"
 
             file.write "\n#{activity.description}\n" if activity.description && !activity.description.empty?
-            file.write "\n<img src='#{activity.map.image_url}'>\n" if activity.map && activity.map.image_url
+            file.write "\n<img src='#{activity.map.image_url}' width='625' />\n" if activity.map && activity.map.image_url
 
             if activity.splits_metric && activity.splits_metric.any?
               file.write "\n### Splits\n"
@@ -116,7 +116,7 @@ menu:
             file.write "\n|#{activity.distance_in_meters_s}|#{activity.moving_time_in_hours_s}|#{activity.pace_per_100_meters_s}|\n"
 
             file.write "\n#{activity.description}\n" if activity.description && !activity.description.empty?
-            file.write "\n<img src='#{activity.map.image_url}'>\n" if activity.map && activity.map.image_url
+            file.write "\n<img src='#{activity.map.image_url}' width='625' />\n" if activity.map && activity.map.image_url
 
             photos = Strava.client.activity_photos(activity.id, size: '600')
             if photos.any?
