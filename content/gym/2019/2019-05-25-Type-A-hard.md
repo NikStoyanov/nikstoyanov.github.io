@@ -21,14 +21,14 @@ menu:
 
 ### Exercises
 
-| Group                   | Exercise                                                                                                       | Repetitions (kg)     |
-|-------------------------|----------------------------------------------------------------------------------------------------------------|----------------------|
-| Back (Latissimus Dorsi) | [Cable pulldown](https://exrx.net/WeightExercises/LatissimusDorsi/CBFrontPulldown)                             | 6 x 61               |
-| Hamstrings (Isolated)   | [Lever single leg seated leg curl](https://exrx.net/WeightExercises/Hamstrings/LVSingleLegSeatedLegCurlHammer) | 6 x 2 x 36           |
-| Back (General)          | [Cable seated row](https://exrx.net/WeightExercises/BackGeneral/CBSeatedRow)                                   | 12 x 40              |
-| Hip (Abductors)         | [Cable hip abduction](https://exrx.net/WeightExercises/HipAbductor/CBHipAbduction)                             | 6 x 2 x 14           |
-| Deltoid (Lateral)       | [Lever lateral raise](https://exrx.net/WeightExercises/DeltoidLateral/LVLateralRaise)                          | 6 x 50               |
-| Biceps Brachii          | [Barbell curl](https://exrx.net/WeightExercises/Biceps/BBCurl)                                                 | 10 x 22.5            |
-| Hip Flexors             | [Vertical leg raise](https://exrx.net/WeightExercises/HipFlexors/BWVerticalLegRaise)                           | 12 x 2 x 18          |
-| Trapezius               | [Barbell shrug](https://exrx.net/WeightExercises/TrapeziusUpper/BBShrug)                                       | 6 x 2 x 22           |
-| Brachialis (Aux)        | [Barbell preacher curl](https://exrx.net/WeightExercises/Brachialis/BBPreacherCurl)                            | 6 x 36               |
+| Group                   | Exercise                                                                                                       | Repetitions (kg) |
+|-------------------------|----------------------------------------------------------------------------------------------------------------|------------------|
+| Back (Latissimus Dorsi) | [Cable pulldown](https://exrx.net/WeightExercises/LatissimusDorsi/CBFrontPulldown)                             | 6 x 61           |
+| Hamstrings (Isolated)   | [Lever single leg seated leg curl](https://exrx.net/WeightExercises/Hamstrings/LVSingleLegSeatedLegCurlHammer) | 6 x 2 x 36       |
+| Back (General)          | [Cable seated row](https://exrx.net/WeightExercises/BackGeneral/CBSeatedRow)                                   | 12 x 40          |
+| Hip (Abductors)         | [Cable hip abduction](https://exrx.net/WeightExercises/HipAbductor/CBHipAbduction)                             | 6 x 2 x 14       |
+| Deltoid (Lateral)       | [Lever lateral raise](https://exrx.net/WeightExercises/DeltoidLateral/LVLateralRaise)                          | 6 x 50           |
+| Biceps Brachii          | [Barbell curl](https://exrx.net/WeightExercises/Biceps/BBCurl)                                                 | 10 x 22.5        |
+| Hip Flexors             | [Vertical leg raise](https://exrx.net/WeightExercises/HipFlexors/BWVerticalLegRaise)                           | 12 x 2 x 18      |
+| Trapezius               | [Barbell shrug](https://exrx.net/WeightExercises/TrapeziusUpper/BBShrug)                                       | 6 x 2 x 22       |
+| Brachialis (Aux)        | [Barbell preacher curl](https://exrx.net/WeightExercises/Brachialis/BBPreacherCurl)                            | 6 x 36           |
