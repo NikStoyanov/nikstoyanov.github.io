@@ -14,7 +14,7 @@ namespace :strava do
 
     require 'dotenv/load'
 
-    start_at_year = 2020
+    start_at_year = 2021
 
     activities_options = { per_page: 10, after: Time.new(start_at_year).to_i }
     activities = Strava.client.athlete_activities(activities_options.merge(page: 1))
